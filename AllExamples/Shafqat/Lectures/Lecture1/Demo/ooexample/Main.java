@@ -34,10 +34,10 @@ public class Main {
 		System.out.print(choices);
 		String ch = sc.next();
 		System.out.println();
-		if(ch.equals("A")){
+		if("A".equals(ch)){
 			handleReports();
 		}
-		else if(ch.equals("B")) { //"B"
+		else if("B".equals(ch)) { //"B"
 			handleDeposits();
 		}
 		else { //"C"
