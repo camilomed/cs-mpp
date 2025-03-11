@@ -1,5 +1,6 @@
 package lesson10.lecture.trickycatch1;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -32,7 +33,7 @@ public class MyClass {
 		try{ 
 			fileReader = new FileReader(f);
 			buf = new BufferedReader(fileReader);
-			String line = buf.readLine();
+			String line = BoundedLineReader.readLine(buf, 5_000_000);
 			System.out.println("Line from file: " + line);
 		} catch(IOException e) {
 			LOG.warning("1st IOException: " 
