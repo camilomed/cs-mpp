@@ -1,4 +1,5 @@
 package lesson1.lecture.objectdemo;
+import java.security.SecureRandom;
 import java.util.*;
 
 /**
@@ -13,7 +14,7 @@ public class RandomNumbers {
     static Random random;
     
     private RandomNumbers() {
-        random = new Random();
+        random = new SecureRandom();
     }
     
     
@@ -46,13 +47,13 @@ public class RandomNumbers {
     }
 	
 	public static void main(String[] args){
-		Random r = new Random();
+		Random r = new SecureRandom();
 		System.out.println(r.nextInt()+" "+r.nextInt()+" "+r.nextInt()+" "+r.nextInt());
-		r = new Random();
+		r = new SecureRandom();
 		System.out.println(r.nextInt()+" "+r.nextInt()+" "+r.nextInt()+" "+r.nextInt());
-		r = new Random();
+		r = new SecureRandom();
 		System.out.println(r.nextInt()+" "+r.nextInt()+" "+r.nextInt()+" "+r.nextInt());
-		r = new Random();
+		r = new SecureRandom();
 		System.out.println(r.nextInt()+" "+r.nextInt()+" "+r.nextInt()+" "+r.nextInt());
 		String s = "hello";
 		char c = s.charAt(0);
