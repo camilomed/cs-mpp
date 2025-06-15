@@ -1,5 +1,6 @@
 package lesson10.exercise_3;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -21,7 +22,7 @@ public class OldFileIO {
 			reader = new BufferedReader(fr);
 		
 			String line = null;
-			while((line = reader.readLine()) != null) {
+			while((line = BoundedLineReader.readLine(reader, 5_000_000)) != null) {
 				System.out.println(line);
 			}
 		} catch(IOException e) {
